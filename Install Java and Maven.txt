@@ -1,0 +1,42 @@
+Install Java and Maven
+
+sudo apt update
+sudo apt install openjdk-21-jdk maven -y
+java -version
+mvn -v
+
+*********
+Generate a New Spring Boot Project
+
+curl https://start.spring.io/starter.tgz \
+  -d dependencies=web \
+  -d language=java \
+  -d type=maven-project \
+  -d groupId=com.example \
+  -d artifactId=java-api \
+  -d name=java-api \
+  -d packageName=com.example.javaapi \
+  | tar -xzvf -
+
+************
+run the API
+
+mvn spring-boot:run
+
+********** Symfony
+create symfony project
+
+composer create-project symfony/skeleton symfony-java-api
+cd symfony-java-api
+
+//add http client
+composer require symfony/http-client
+
+//create form 
+php bin/console make:controller FormController
+
+
+
+
+
+
