@@ -35,6 +35,28 @@ composer require symfony/http-client
 //create form 
 php bin/console make:controller FormController
 
+********** RabitMQL
+
+sudo apt update
+sudo apt upgrade -y
+
+sudo apt install -y erlang
+sudo apt install -y rabbitmq-server
+
+//enable and start the service
+sudo systemctl enable rabbitmq-server
+sudo systemctl start rabbitmq-server
+
+check from http://localhost:15672
+
+//configure symfony to use rabbit
+composer require symfony/messenger symfony/amqp-messenger
+
+******  RUN IN JAVA to consume the rabbit
+
+mvn clean compile exec:java -Dexec.mainClass="RabbitConsumer"
+
+
 
 
 
