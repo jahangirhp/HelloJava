@@ -57,11 +57,6 @@ composer require symfony/messenger symfony/amqp-messenger
 mvn clean compile exec:java -Dexec.mainClass="RabbitConsumer"
 
 
-
-
-
-
-
 **************create a symfony project
 
 php -v
