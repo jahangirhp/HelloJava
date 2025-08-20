@@ -62,3 +62,17 @@ mvn clean compile exec:java -Dexec.mainClass="RabbitConsumer"
 
 
 
+**************create a symfony project
+
+php -v
+composer -V
+
+sudo apt update
+sudo apt install php-cli unzip curl
+sudo apt install composer
+
+wget https://get.symfony.com/cli/installer -O - | bash
+mv ~/.symfony*/bin/symfony /usr/local/bin/symfony
+
+symfony new my_project --webapp
+
